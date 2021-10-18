@@ -1,0 +1,137 @@
+.service_img {
+    background-image: url(../../images/services-bg.jpg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+.service_container {
+    margin: 100px 0;
+}
+
+.service_header_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service_header {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    max-width: 650px;
+}
+
+.service_header>h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+}
+
+.service_card {
+    background: url(../../images/image1.jpg);
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+.service_card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 1;
+    z-index: -1;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    border-radius: 10px;
+
+}
+
+.service_card:hover {
+    transform: translateY(-10px);
+}
+
+.service_card:hover::before {
+    background-color: #00000083;
+}
+
+.service_card>.service_icon {
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    line-height: 90px;
+    background-color: #e1e7fb;
+    border: 1px solid #207ef7;
+    border-radius: 50px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    margin-bottom: 25px;
+}
+
+.service_card>.service_icon i {
+    color: #6c9dfb;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    display: inline-block;
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    background-color: #eaf7fd;
+    color: #207ef7;
+    border-radius: 30px;
+}
+
+.service_card>h2 {
+    font-size: 25px;
+    font-weight: 700;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.service_card>p {
+    color: #6d6d6d;
+    transition: 0.5s;
+    cursor: default;
+}
+
+.service_card>a {
+    text-decoration: none;
+    padding: 7px 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 9px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.service_card>a:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+.service_card:hover h2,
+.service_card:hover p {
+    color: #fff;
+}

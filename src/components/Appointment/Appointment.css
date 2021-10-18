@@ -1,0 +1,36 @@
+.appointment_container {
+    background-color: #fff;
+}
+
+.appointment-items {
+    display: flex;
+}
+
+.appointment_icon {
+    width: 77px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    background-color: #cfdafc;
+    transition: all 0.5s ease;
+}
+
+.appointment_icon>i {
+    transition: all 0.5s ease;
+    font-size: 20px;
+}
+
+.appointment_icon:hover {
+    background-color: var(--primary-color);
+}
+
+.appointment_icon:hover i {
+    color: #fff;
+}
+
+.appointment_context>p {
+    color: #6d6d6d;
+}

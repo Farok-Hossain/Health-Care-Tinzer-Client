@@ -1,0 +1,123 @@
+.header {
+    height: 80px;
+    background-color: transparent;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.header.active {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.header_logo_div {
+    max-width: 130px;
+    width: 100%;
+}
+
+.nav_menu {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0px;
+    background-color: transparent;
+}
+
+.nav_item {
+    margin: 0 12px;
+}
+
+
+.nav_link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+
+.nav_link:hover {
+    color: var(--primary-color);
+}
+
+.nav_link.active_nav {
+    color: var(--primary-color);
+}
+
+.get_a_quote_btn {
+    border: none;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 14px 30px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.get_a_quote_btn:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.humberger_menu {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.humberger_menu i {
+    font-size: 30px;
+}
+
+.humberger_menu .fa-times {
+    color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+
+    .nav_menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--secondary-color);
+        z-index: 1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: all 0.3s ease;
+        line-height: 2.5;
+    }
+
+    .nav_link {
+        color: #fff;
+        font-size: 25px;
+    }
+
+    .nav_menu.active {
+        transform: scaleX(1);
+    }
+
+}
