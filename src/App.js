@@ -11,6 +11,8 @@ import NotFound from "./components/Notfound/Notfound";
 import About from "./pages/About/About";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
+import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
+import Services from "./pages/Services/Services";
 
 initializationAuthentication();
 
@@ -29,6 +31,12 @@ function App() {
           </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/service/:serviceId">
+            <ServiceDetails />
+          </Route>
+          <Route path="/services">
+            <Services />
           </Route>
           <Route path="/sign-in">
             <SignIn />

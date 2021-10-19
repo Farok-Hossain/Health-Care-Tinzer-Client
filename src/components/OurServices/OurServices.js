@@ -1,10 +1,19 @@
 import { Col, Container, Row } from "react-bootstrap";
 import OurServicesData from "./OurServicesData";
 import "./OurServices.css";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-const OurServices = () => {
+const OurServices = ({ services }) => {
   const ourServiceData = OurServicesData();
+  const history = useHistory();
+  const handleCardBtn = (id) => {
+    history.push(`/service/${id}`);
+  };
+
+  const style = {
+    color: services ? "black" : "",
+  };
+
   return (
     <>
       <div className="service_img"></div>
@@ -12,9 +21,9 @@ const OurServices = () => {
         <Container>
           <div className="service_header_container">
             <div className="service_header">
-              <h5>Our Services</h5>
-              <h1>Our Healthcare Services</h1>
-              <p>
+              <h5 style={style}>Our Services</h5>
+              <h1 style={style}>Our Healthcare Services</h1>
+              <p style={style}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
                 ipsum suspendisse
@@ -23,20 +32,14 @@ const OurServices = () => {
           </div>
           <Row>
             {ourServiceData.map((item, ind) => {
-              const { icon, name, desc } = item;
+              const { id, icon, name, desc } = item;
               return (
-                <Col
-                  className="service_item"
-                  sm="12"
-                  md="6"
-                  lg="4"
-                  key={ind + "or"}
-                >
+                <Col className="service_item" sm="12" md="6" lg="4" key={id}>
                   <div className="service_card">
                     <div className="service_icon">{icon}</div>
                     <h2>{name}</h2>
                     <p>{desc}</p>
-                    <Link to="/">Read More +</Link>
+                    <span onClick={() => handleCardBtn(id)}>Read More +</span>
                   </div>
                 </Col>
               );

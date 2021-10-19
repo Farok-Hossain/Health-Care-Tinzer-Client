@@ -1,8 +1,10 @@
 import "./TopHeader.css";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const TopHeader = () => {
+  const { logOut, user } = useAuth();
   return (
     <div className="top_banner">
       <Container className="d-flex justify-content-between">
@@ -42,10 +44,18 @@ const TopHeader = () => {
             </div>
           </div>
           <div className="signin_signup">
-            <Link to="/sign-in">Sign In</Link>
-            <Link to="/sign-up" className="signup-btn">
-              Sign Up
-            </Link>
+            {!user.email ? (
+              <>
+                <Link to="/sign-in">Sign In</Link>
+                <Link to="/sign-up" className="signup-btn">
+                  Sign Up
+                </Link>
+              </>
+            ) : (
+              <button onClick={logOut} className="signup-btn button">
+                Log Out
+              </button>
+            )}
           </div>
         </div>
       </Container>

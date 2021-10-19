@@ -14,7 +14,7 @@
 }
 
 .service_container {
-    margin: 100px 0;
+    padding: 100px 0;
 }
 
 .service_header_container {
@@ -115,7 +115,7 @@
     cursor: default;
 }
 
-.service_card>a {
+.service_card>span {
     text-decoration: none;
     padding: 7px 10px;
     background-color: var(--primary-color);
@@ -124,9 +124,10 @@
     font-weight: 500;
     font-size: 16px;
     transition: 0.5s;
+    cursor: pointer;
 }
 
-.service_card>a:hover {
+.service_card>span:hover {
     background-color: #fff;
     color: var(--primary-color);
 }

@@ -4,7 +4,7 @@ import AboutData from "./AboutData";
 import checkMark from "../../images/check-mark.svg";
 import "./About.css";
 
-const About = () => {
+const About = ({ img }) => {
   const aboutItemData = [
     {
       services: "Cold, Cough, Flu",
@@ -28,7 +28,7 @@ const About = () => {
   return (
     <>
       <div className="Common_container">
-        <Common data={AboutData}>
+        <Common data={AboutData} imgs={img}>
           <Row className="about_items">
             {aboutItemData.map((item, ind) => (
               <Col lg="6" key={ind}>

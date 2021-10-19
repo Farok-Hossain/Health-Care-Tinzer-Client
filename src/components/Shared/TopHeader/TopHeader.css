@@ -7,6 +7,7 @@
 
 .contact_details {
     display: flex;
+
 }
 
 .contact_details_items {
@@ -33,6 +34,7 @@
 
 .social_icons_signin {
     display: flex;
+    align-items: center;
 }
 
 .social_links {
@@ -114,6 +116,16 @@
 
 .signup-btn {
     padding: 7px 10px;
+    background-color: #fff;
+    color: var(--secondary-color) !important;
+    border-radius: 9px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.signup-btn.button {
+    padding: 5px 12px;
     background-color: #fff;
     color: var(--secondary-color) !important;
     border-radius: 9px;

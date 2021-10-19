@@ -11,8 +11,7 @@ const Header = () => {
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const [toggleNav, setToggleNav] = useState(true);
 
-  const { logOut, user } = useAuth();
-  console.log(user);
+  const { user } = useAuth();
 
   const showButton = () => {
     if (window.innerWidth <= 992) {
@@ -28,7 +27,7 @@ const Header = () => {
   }, []);
   window.addEventListener("resize", showButton);
 
-  const scrollHeight = isMobileDevice ? 80 : 150;
+  const scrollHeight = isMobileDevice ? 0 : 0;
 
   const chagneBackground = () => {
     if (window.scrollY >= scrollHeight) {
@@ -77,19 +76,9 @@ const Header = () => {
                 onClick={handleToggleNav}
                 activeClassName="active_nav"
                 className="nav_link"
-                to="/serives"
+                to="/services"
               >
                 Services
-              </NavLink>
-            </li>
-            <li className="nav_item">
-              <NavLink
-                onClick={handleToggleNav}
-                activeClassName="active_nav"
-                className="nav_link"
-                to="/contact"
-              >
-                Contact
               </NavLink>
             </li>
             <li className="nav_item">
@@ -106,7 +95,6 @@ const Header = () => {
               <li className="nav_item">
                 <NavLink
                   onClick={handleToggleNav}
-                  activeClassName="active_nav"
                   className="nav_link"
                   to="/sign-in"
                 >

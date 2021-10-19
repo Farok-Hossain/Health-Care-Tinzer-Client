@@ -31,7 +31,7 @@ const useFirebase = () => {
   const signInUsingGithub = () => {
     signInWithPopup(auth, githubProvider)
       .then((result) => {
-        setUser(result);
+        // setUser(result.user);
         setError("");
       })
       .catch((error) => {

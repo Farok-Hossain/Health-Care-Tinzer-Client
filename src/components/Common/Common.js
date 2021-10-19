@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import "./Common.css";
 
-const Common = ({ children, ...rest }) => {
+const Common = ({ children, imgs, ...rest }) => {
   const [reverse, setReverse] = useState("");
   const { flexReverse, img, name, header, desc } = rest.data;
   useEffect(() => {
@@ -12,7 +12,7 @@ const Common = ({ children, ...rest }) => {
     <Container>
       <Row className={reverse} id="common_section">
         <Col className="common_img" md="12" lg="6">
-          <img className="img-fluid" src={img} alt="" />
+          <img className="img-fluid" src={imgs || img} alt="" />
         </Col>
         <Col className="common_content" md="12" lg="6">
           <h4>{name}</h4>
