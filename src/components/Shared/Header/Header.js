@@ -3,13 +3,17 @@ import { Container } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../../images/logo.png";
 import { useEffect, useState } from "react";
-import navItemData from "./HeaderItem";
+import useAuth from "../../../hooks/useAuth";
 
 const Header = () => {
   const [button, setButton] = useState(true);
   const [navbar, setNavbar] = useState(false);
   const [isMobileDevice, setIsMobileDevice] = useState(false);
   const [toggleNav, setToggleNav] = useState(true);
+
+  const { logOut, user } = useAuth();
+  console.log(user);
+
   const showButton = () => {
     if (window.innerWidth <= 992) {
       setButton(false);
@@ -48,21 +52,68 @@ const Header = () => {
         </div>
         <nav className="nav_bar">
           <ul className={toggleNav ? "nav_menu" : "nav_menu active"}>
-            {navItemData.map((item, ind) => {
-              const { location, navText } = item;
-              return (
-                <li key={ind} className="nav_item">
-                  <NavLink
-                    onClick={handleToggleNav}
-                    activeClassName="active_nav"
-                    className="nav_link"
-                    to={location}
-                  >
-                    {navText}
-                  </NavLink>
-                </li>
-              );
-            })}
+            <li className="nav_item">
+              <NavLink
+                onClick={handleToggleNav}
+                activeClassName="active_nav"
+                className="nav_link"
+                to="/home"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav_item">
+              <NavLink
+                onClick={handleToggleNav}
+                activeClassName="active_nav"
+                className="nav_link"
+                to="/about"
+              >
+                About
+              </NavLink>
+            </li>
+            <li className="nav_item">
+              <NavLink
+                onClick={handleToggleNav}
+                activeClassName="active_nav"
+                className="nav_link"
+                to="/serives"
+              >
+                Services
+              </NavLink>
+            </li>
+            <li className="nav_item">
+              <NavLink
+                onClick={handleToggleNav}
+                activeClassName="active_nav"
+                className="nav_link"
+                to="/contact"
+              >
+                Contact
+              </NavLink>
+            </li>
+            <li className="nav_item">
+              <NavLink
+                onClick={handleToggleNav}
+                activeClassName="active_nav"
+                className="nav_link"
+                to="/contact"
+              >
+                Contact
+              </NavLink>
+            </li>
+            {!user?.email && (
+              <li className="nav_item">
+                <NavLink
+                  onClick={handleToggleNav}
+                  activeClassName="active_nav"
+                  className="nav_link"
+                  to="/sign-in"
+                >
+                  Sign In
+                </NavLink>
+              </li>
+            )}
           </ul>
         </nav>
         {button ? (

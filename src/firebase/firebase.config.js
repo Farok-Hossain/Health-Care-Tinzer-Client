@@ -1,11 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyAoPYo36X0COdqgr7qTmbrmdSqSjo67LAk",
-  authDomain: "simple-firebase-authenti-9b575.firebaseapp.com",
-  projectId: "simple-firebase-authenti-9b575",
-  storageBucket: "simple-firebase-authenti-9b575.appspot.com",
-  messagingSenderId: "194050863705",
-  appId: "1:194050863705:web:e53d1e5c84983ca573b748",
-  measurementId: "G-9Y8BV9Q9BZ",
+  apiKey: "AIzaSyAbVogGFCU78jUEBgdhRgM7ktYb3XSEvI4",
+  authDomain: "tinzer-authentication.firebaseapp.com",
+  projectId: "tinzer-authentication",
+  storageBucket: "tinzer-authentication.appspot.com",
+  messagingSenderId: "375063070604",
+  appId: "1:375063070604:web:c8c194b403ceae60a738a9",
+  measurementId: "G-HKH5B30LCN",
 };
 
 export default firebaseConfig;

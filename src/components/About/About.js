@@ -5,47 +5,39 @@ import checkMark from "../../images/check-mark.svg";
 import "./About.css";
 
 const About = () => {
+  const aboutItemData = [
+    {
+      services: "Cold, Cough, Flu",
+    },
+    {
+      services: "Chronic Disease",
+    },
+    {
+      services: "Allergies",
+    },
+    {
+      services: "Pain",
+    },
+    {
+      services: "Women's Health issues",
+    },
+    {
+      services: "Medication Questions",
+    },
+  ];
   return (
     <>
       <div className="Common_container">
         <Common data={AboutData}>
           <Row className="about_items">
-            <Col lg="6">
-              <div className="about_item">
-                <img src={checkMark} alt="" />
-                <h5>Cold, Cough, Flu</h5>
-              </div>
-            </Col>
-            <Col lg="6">
-              <div className="about_item">
-                <img src={checkMark} alt="" />
-                <h5>Chronic Disease</h5>
-              </div>
-            </Col>
-            <Col lg="6">
-              <div className="about_item">
-                <img src={checkMark} alt="" />
-                <h5>Allergies</h5>
-              </div>
-            </Col>
-            <Col lg="6">
-              <div className="about_item">
-                <img src={checkMark} alt="" />
-                <h5>Pain</h5>
-              </div>
-            </Col>
-            <Col lg="6">
-              <div className="about_item">
-                <img src={checkMark} alt="" />
-                <h5>Women's Health issues</h5>
-              </div>
-            </Col>
-            <Col lg="6">
-              <div className="about_item">
-                <img src={checkMark} alt="" />
-                <h5>Medication Questions</h5>
-              </div>
-            </Col>
+            {aboutItemData.map((item, ind) => (
+              <Col lg="6" key={ind}>
+                <div className="about_item">
+                  <img src={checkMark} alt="" />
+                  <h5>{item.services}</h5>
+                </div>
+              </Col>
+            ))}
           </Row>
         </Common>
       </div>

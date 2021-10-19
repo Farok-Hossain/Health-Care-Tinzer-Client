@@ -1,0 +1,40 @@
+.common_container {
+    position: relative;
+    z-index: 1;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    background-attachment: fixed;
+    background-image: url(../../images/bg-1.jpg);
+}
+
+.common_container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: .77;
+}
+
+#common_header_items {
+    height: 100%;
+}
+
+.common_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.common_header h1 {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+    font-weight: 700;
+    color: #fff;
+}

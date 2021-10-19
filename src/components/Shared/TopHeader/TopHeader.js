@@ -1,13 +1,8 @@
 import "./TopHeader.css";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
 
 const TopHeader = () => {
-  const { signInUsingGoogle } = useAuth();
-  const handleSignIn = () => {
-    signInUsingGoogle();
-  };
   return (
     <div className="top_banner">
       <Container className="d-flex justify-content-between">
@@ -47,7 +42,7 @@ const TopHeader = () => {
             </div>
           </div>
           <div className="signin_signup">
-            <button onClick={handleSignIn}>Sign In</button>
+            <Link to="/sign-in">Sign In</Link>
             <Link to="/sign-up" className="signup-btn">
               Sign Up
             </Link>

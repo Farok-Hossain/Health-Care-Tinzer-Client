@@ -8,7 +8,6 @@ const Common = ({ children, ...rest }) => {
   useEffect(() => {
     setReverse(flexReverse);
   }, [flexReverse]);
-  console.log(reverse);
   return (
     <Container>
       <Row className={reverse} id="common_section">
