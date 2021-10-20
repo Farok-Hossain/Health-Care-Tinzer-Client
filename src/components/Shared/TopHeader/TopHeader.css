@@ -1,146 +1,145 @@
 .top_banner {
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    padding: 22px 0;
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 0;
 }
 
 .contact_details {
-    display: flex;
+  display: flex;
 
 }
 
 .contact_details_items {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 
 .contact_details_icon {
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #fff;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
 }
 
 .contact_details_text {
-    color: #fff;
-    font-size: 14px;
+  color: #fff;
+  font-size: 14px;
 }
 
 .social_icons_signin {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .social_links {
-    display: flex;
+  display: flex;
 }
 
 .social_icon {
-    height: 25px;
-    width: 25px;
-    margin: 0 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background: #fff;
-    transition: 0.3s ease-in-out;
+  height: 25px;
+  width: 25px;
+  margin: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.3s ease-in-out;
 }
 
 .social_icon>.fab {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 /* facebook icon */
 .social_icon:nth-child(1) {
-    color: #3878f8;
+  color: #3878f8;
 }
 
 .social_icon:hover:nth-child(1) {
-    background-color: #3878f8;
-    color: #fff;
+  background-color: #3878f8;
+  color: #fff;
 }
 
 /* twitter icon */
 .social_icon:nth-child(2) {
-    color: #1DA1F2;
+  color: #1DA1F2;
 }
 
 .social_icon:hover:nth-child(2) {
-    background-color: #1DA1F2;
-    color: #fff;
+  background-color: #1DA1F2;
+  color: #fff;
 }
 
 /* pinterest icon */
 .social_icon:nth-child(3) {
-    color: #E60023;
+  color: #E60023;
 }
 
 .social_icon:hover:nth-child(3) {
-    background-color: #E60023;
-    color: #fff;
+  background-color: #E60023;
+  color: #fff;
 }
 
 /* pinterest icon */
 .social_icon:nth-child(4) {
-    color: #DD2A7B;
+  color: #DD2A7B;
 }
 
 .social_icon:hover:nth-child(4) {
-    background-color: #DD2A7B;
-    color: #fff;
+  background-color: #DD2A7B;
+  color: #fff;
 }
 
 .signin_signup button {
-    background: transparent;
-    border: none;
-    color: #fff;
-    font-weight: 500;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-weight: 500;
 }
 
 .signin_signup>a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
 }
 
 .signin_signup>a:nth-child(1) {
-    margin-left: 10px;
+  margin-left: 10px;
 }
 
 .signup-btn {
-    padding: 7px 10px;
-    background-color: #fff;
-    color: var(--secondary-color) !important;
-    border-radius: 9px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: 0.3s ease-in-out;
+  padding: 7px 10px;
+  background-color: #fff;
+  color: var(--secondary-color) !important;
+  border-radius: 9px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
 }
 
 .signup-btn.button {
-    padding: 5px 12px;
-    background-color: #fff;
-    color: var(--secondary-color) !important;
-    border-radius: 9px;
-    font-weight: 500;
-    font-size: 16px;
-    transition: 0.3s ease-in-out;
+  background-color: #fff;
+  color: var(--secondary-color) !important;
+  border-radius: 9px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
 }
 
 .signup-btn:hover {
-    color: #fff !important;
-    background-color: var(--primary-color);
+  color: #fff !important;
+  background-color: var(--primary-color);
 }
 
 @media screen and (max-width: 992px) {
-    .top_banner {
-        display: none;
-    }
+  .top_banner {
+    display: none;
+  }
 }

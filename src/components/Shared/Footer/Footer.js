@@ -40,22 +40,22 @@ const Footer = () => {
             <div className="single-footer-widget">
               <h3>Instagram</h3>
               <Row className="g-3">
-                <Col className="instragam_img_div" lg="4">
+                <Col className="instragam_img_div" lg="4" xs="6">
                   <img className="img-fluid instragam_img" src={img1} alt="" />
                 </Col>
-                <Col className="instragam_img_div" lg="4">
+                <Col className="instragam_img_div" lg="4" xs="6">
                   <img className="img-fluid instragam_img" src={img2} alt="" />
                 </Col>
-                <Col className="instragam_img_div" lg="4">
+                <Col className="instragam_img_div" lg="4" xs="6">
                   <img className="img-fluid instragam_img" src={img3} alt="" />
                 </Col>
-                <Col className="instragam_img_div" lg="4">
+                <Col className="instragam_img_div" lg="4" xs="6">
                   <img className="img-fluid instragam_img" src={img4} alt="" />
                 </Col>
-                <Col className="instragam_img_div" lg="4">
+                <Col className="instragam_img_div" lg="4" xs="6">
                   <img className="img-fluid instragam_img" src={img5} alt="" />
                 </Col>
-                <Col className="instragam_img_div" lg="4">
+                <Col className="instragam_img_div" lg="4" xs="6">
                   <img className="img-fluid instragam_img" src={img6} alt="" />
                 </Col>
               </Row>

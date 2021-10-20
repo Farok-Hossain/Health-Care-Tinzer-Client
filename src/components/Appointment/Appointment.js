@@ -10,7 +10,9 @@ const Appointment = () => {
         <Row>
           <Col className="appointment-items" lg="12">
             <div className="appointment_icon">
-              <i className="far fa-calendar-alt"></i>
+              <span>
+                <i className="far fa-calendar-alt"></i>
+              </span>
             </div>
             <div className="appointment_context">
               <h5>Pick Your Package</h5>
@@ -22,7 +24,9 @@ const Appointment = () => {
           </Col>
           <Col className="appointment-items" lg="12">
             <div className="appointment_icon">
-              <i className="fas fa-file-signature"></i>
+              <span>
+                <i className="fas fa-file-signature"></i>
+              </span>
             </div>
             <div className="appointment_context">
               <h5>Tinzer App Setup</h5>
@@ -34,7 +38,9 @@ const Appointment = () => {
           </Col>
           <Col className="appointment-items" lg="12">
             <div className="appointment_icon">
-              <i className="fas fa-cogs"></i>
+              <span>
+                <i className="fas fa-cogs"></i>
+              </span>
             </div>
             <div className="appointment_context">
               <h5>Going Live</h5>
@@ -46,7 +52,9 @@ const Appointment = () => {
           </Col>
           <Col className="appointment-items" lg="12">
             <div className="appointment_icon">
-              <i className="fas fa-tv"></i>
+              <span>
+                <i className="fas fa-tv"></i>
+              </span>
             </div>
             <div className="appointment_context">
               <h5>Pick Your Package</h5>

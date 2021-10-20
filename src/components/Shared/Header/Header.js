@@ -27,17 +27,21 @@ const Header = () => {
   }, []);
   window.addEventListener("resize", showButton);
 
-  const scrollHeight = isMobileDevice ? 0 : 0;
+  //   const scrollHeight = isMobileDevice ? 0 : 0;
 
-  const chagneBackground = () => {
-    if (window.scrollY >= scrollHeight) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
+  useEffect(() => {
+    setNavbar(true);
+  }, []);
 
-  window.addEventListener("scroll", chagneBackground);
+  //   const chagneBackground = () => {
+  //     if (window.scrollY >= scrollHeight) {
+  //       setNavbar(true);
+  //     } else {
+  //       setNavbar(false);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", chagneBackground);
 
   const handleToggleNav = () => {
     setToggleNav(!toggleNav);

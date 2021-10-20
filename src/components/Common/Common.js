@@ -14,7 +14,7 @@ const Common = ({ children, imgs, ...rest }) => {
         <Col className="common_img" md="12" lg="6">
           <img className="img-fluid" src={imgs || img} alt="" />
         </Col>
-        <Col className="common_content" md="12" lg="6">
+        <Col className="common_content my-lg-0 my-4" md="12" lg="6">
           <h4>{name}</h4>
           <h1>{header}</h1>
           <p>{desc}</p>

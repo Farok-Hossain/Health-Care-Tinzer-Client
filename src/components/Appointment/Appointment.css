@@ -1,36 +1,39 @@
 .appointment_container {
-    background-color: #fff;
+  background-color: #fff;
 }
 
 .appointment-items {
-    display: flex;
+  display: flex;
 }
 
 .appointment_icon {
-    width: 77px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-    background-color: #cfdafc;
-    transition: all 0.5s ease;
+  margin-right: 15px;
+}
+
+.appointment_icon>span {
+  transition: all 0.5s ease;
+  background-color: #cfdafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .appointment_icon>i {
-    transition: all 0.5s ease;
-    font-size: 20px;
+  transition: all 0.5s ease;
+  font-size: 20px;
 }
 
-.appointment_icon:hover {
-    background-color: var(--primary-color);
+.appointment_icon>span:hover {
+  background-color: var(--primary-color);
 }
 
-.appointment_icon:hover i {
-    color: #fff;
+.appointment_icon>span:hover i {
+  color: #fff;
 }
 
 .appointment_context>p {
-    color: #6d6d6d;
+  color: #6d6d6d;
 }

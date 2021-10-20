@@ -52,9 +52,12 @@ const TopHeader = () => {
                 </Link>
               </>
             ) : (
-              <button onClick={logOut} className="signup-btn button">
-                Log Out
-              </button>
+              <>
+                <span className="text-white me-2">{user.displayName}</span>
+                <button onClick={logOut} className="signup-btn button">
+                  Log Out
+                </button>
+              </>
             )}
           </div>
         </div>

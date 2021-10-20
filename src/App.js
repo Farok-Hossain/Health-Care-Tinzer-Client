@@ -7,12 +7,13 @@ import Footer from "./components/Shared/Footer/Footer";
 import AuthProvider from "./context/AuthProvider";
 import TopHeader from "./components/Shared/TopHeader/TopHeader";
 import Home from "./pages/Home/Home";
-import NotFound from "./components/Notfound/Notfound";
 import About from "./pages/About/About";
 import SignIn from "./pages/SignIn/SignIn";
 import SignUp from "./pages/SignUp/SignUp";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Services from "./pages/Services/Services";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Notfound from "./components/Notfound/Notfound";
 
 initializationAuthentication();
 
@@ -32,9 +33,9 @@ function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/service/:serviceId">
+          <PrivateRoute path="/service/:serviceId">
             <ServiceDetails />
-          </Route>
+          </PrivateRoute>
           <Route path="/services">
             <Services />
           </Route>
@@ -44,8 +45,8 @@ function App() {
           <Route path="/sign-up">
             <SignUp />
           </Route>
-          <Route>
-            <NotFound />
+          <Route path="*">
+            <Notfound />
           </Route>
         </Switch>
         <Footer />
