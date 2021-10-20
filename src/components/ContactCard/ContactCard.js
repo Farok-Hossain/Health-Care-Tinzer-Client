@@ -8,7 +8,7 @@ const ContactCard = () => {
         <Col className="contact_card" lg="4" md="6" sm="12">
           <div className="d-flex align-items-center justify-content-center flex-column py-4">
             <div className="contact_icon">
-              <i classsName="fas fa-envelope"></i>
+              <i className="fas fa-envelope"></i>
             </div>
             <h4>Email Here</h4>
             <span>
@@ -22,7 +22,7 @@ const ContactCard = () => {
         <Col className="contact_card" lg="4" md="6" sm="12">
           <div className="d-flex align-items-center justify-content-center flex-column py-4">
             <div className="contact_icon">
-              <i classsName="fas fa-map-marker-alt"></i>
+              <i className="fas fa-map-marker-alt"></i>
             </div>
             <h4>Location Here</h4>
             <p>2750 Quadra Street Victoria,</p>
@@ -32,7 +32,7 @@ const ContactCard = () => {
         <Col className="contact_card" lg="4" md="6" sm="12">
           <div className="d-flex align-items-center justify-content-center flex-column py-4">
             <div className="contact_icon">
-              <i classsName="fas fa-phone"></i>
+              <i className="fas fa-phone"></i>
             </div>
             <h4>Call Here</h4>
             <span>
