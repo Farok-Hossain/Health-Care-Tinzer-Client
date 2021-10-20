@@ -1,3 +1,14 @@
+.service_details_container {
+  position: relative;
+  z-index: 1;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  background-attachment: fixed;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../images/serices/bg-6.jpg);
+}
+
 .service_card_details {
-    max-width: 400px;
+  max-width: 400px;
 }

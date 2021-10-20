@@ -14,6 +14,7 @@ import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Services from "./pages/Services/Services";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Notfound from "./components/Notfound/Notfound";
+import Contact from "./pages/Contact/Contact";
 
 initializationAuthentication();
 
@@ -38,6 +39,9 @@ function App() {
           </PrivateRoute>
           <Route path="/services">
             <Services />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
           <Route path="/sign-in">
             <SignIn />

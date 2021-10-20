@@ -2,6 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import OurServicesData from "./OurServicesData";
 import "./OurServices.css";
 import { useHistory } from "react-router-dom";
+import CommonSectionHeader from "../CommonSectionHeader/CommonSectionHeader";
 
 const OurServices = ({ services }) => {
   const ourServiceData = OurServicesData();
@@ -14,22 +15,18 @@ const OurServices = ({ services }) => {
     color: services ? "black" : "",
   };
 
+  const data = {
+    headline: "Our Services",
+    header: "Our Healthcare Services",
+    desc: "HASBD helps by offering a wide range of convenient healthcare services (Hospital Info, Doctors Appointment and Ambulance Service) for you and your family. These can help you save time, money and make it easier to deal with life's most unexpected events.",
+  };
+
   return (
     <>
       <div className="service_img"></div>
       <div className="service_container">
         <Container>
-          <div className="service_header_container">
-            <div className="service_header">
-              <h5 style={style}>Our Services</h5>
-              <h1 style={style}>Our Healthcare Services</h1>
-              <p style={style}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-                ipsum suspendisse
-              </p>
-            </div>
-          </div>
+          <CommonSectionHeader style={style} data={data}></CommonSectionHeader>
           <Row>
             {ourServiceData.map((item, ind) => {
               const { id, icon, name, desc } = item;

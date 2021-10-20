@@ -8,7 +8,7 @@ const BannerCard = () => {
     <div className="banner_container">
       <Container>
         <Fade bottom exit={false}>
-          <Row bottom>
+          <Row>
             {BannerItem.map((item, ind) => {
               const { icon, header, desc } = item;
               return (

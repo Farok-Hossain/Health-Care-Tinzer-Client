@@ -3,8 +3,13 @@ import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import "./CommonForm.css";
+import { useLocation, useHistory } from "react-router-dom";
+
 const CommonForm = ({ signin }) => {
-  const { signInUsingGoogle, signInUsingGithub } = useAuth();
+  const location = useLocation();
+  const history = useHistory();
+
+  const { setUser, setError, signInUsingGoogle, signInUsingGithub } = useAuth();
 
   const [userRegistration, setUserRegistration] = useState({
     username: "",
@@ -18,7 +23,20 @@ const CommonForm = ({ signin }) => {
     setUserRegistration({ ...userRegistration, [name]: value });
   };
 
-  console.log(userRegistration);
+  const redirect_uri = location.state?.from || "/home";
+
+  const handleGoogleLogin = () => {
+    signInUsingGoogle()
+      .then((data) => {
+        setError("");
+        setUser(data.user);
+        history.push(redirect_uri);
+        console.log(redirect_uri);
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  };
 
   return (
     <div className="form">
@@ -83,7 +101,7 @@ const CommonForm = ({ signin }) => {
             <span className="signin_or">OR</span>
           </Col>
           <Col lg="6">
-            <button className="sign_in_btn" onClick={signInUsingGoogle}>
+            <button className="sign_in_btn" onClick={handleGoogleLogin}>
               <i className="fab fa-google-plus-g"></i>Sign In With Google
             </button>
           </Col>

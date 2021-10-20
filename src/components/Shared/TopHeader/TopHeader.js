@@ -5,6 +5,7 @@ import useAuth from "../../../hooks/useAuth";
 
 const TopHeader = () => {
   const { logOut, user } = useAuth();
+  console.log(user);
   return (
     <div className="top_banner">
       <Container className="d-flex justify-content-between">
@@ -44,7 +45,7 @@ const TopHeader = () => {
             </div>
           </div>
           <div className="signin_signup">
-            {!user.email ? (
+            {!user?.email ? (
               <>
                 <Link to="/sign-in">Sign In</Link>
                 <Link to="/sign-up" className="signup-btn">

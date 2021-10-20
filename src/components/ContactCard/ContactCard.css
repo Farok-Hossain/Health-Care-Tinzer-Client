@@ -1,0 +1,48 @@
+.contact_icon {
+  display: inline-block;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7fafd;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #207ef7;
+  -webkit-transition: .5s;
+  transition: .5s;
+  margin-bottom: 15px;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact_card:hover .contact_icon {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.contact_card h4 {
+  margin-bottom: 10px;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.contact_card span {
+  margin-bottom: 0;
+  color: #7b7c93;
+
+}
+
+.contact_card span a {
+  display: inline-block;
+  color: #7b7c93;
+  text-decoration: none;
+}
+
+.contact_card>div {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact_card>div:hover {
+  transform: translateY(-10px);
+}

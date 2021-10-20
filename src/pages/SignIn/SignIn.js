@@ -1,15 +1,19 @@
 import CommonForm from "../../components/CommonForm/CommonForm";
 import CommonHeader from "../../components/CommonHeader/CommonHeader";
 import img from "../../images/signin.svg";
+import "./SignIn.css";
+
 const SignIn = () => {
   return (
     <>
-      <CommonHeader
-        img={img}
-        header="Sign In"
-        //   flex="flex-row-reverse"
-      ></CommonHeader>
-      <CommonForm signin={true}></CommonForm>
+      <div className="signin_container">
+        <CommonHeader
+          img={img}
+          header="Sign In"
+          //   flex="flex-row-reverse"
+        ></CommonHeader>
+      </div>
+      <CommonForm></CommonForm>
     </>
   );
 };

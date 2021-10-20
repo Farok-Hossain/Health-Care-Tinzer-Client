@@ -26,7 +26,9 @@ const ServiceDetails = () => {
   console.log(detail);
   return (
     <>
-      <CommonHeader img={img} header="setDetail Details"></CommonHeader>
+      <div className="service_details_container">
+        <CommonHeader img={img} header="setDetail Details"></CommonHeader>
+      </div>
       <div className="container my-4">
         <Row>
           <Col
@@ -36,10 +38,8 @@ const ServiceDetails = () => {
             <Card className="service_card_details">
               <Card.Img variant="top" src={detail.img} />
               <Card.Body>
-                <Card.Text>
-                  <h4>{detail.name}</h4>
-                  <p>{detail.desc}</p>
-                </Card.Text>
+                <h4>{detail.name}</h4>
+                <p>{detail.desc}</p>
               </Card.Body>
             </Card>
           </Col>

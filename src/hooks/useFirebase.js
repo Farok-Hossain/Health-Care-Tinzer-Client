@@ -6,26 +6,33 @@ import {
   signOut,
   onAuthStateChanged,
   GithubAuthProvider,
+  createUserWithEmailAndPassword,
 } from "firebase/auth";
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState({});
+  const [formData, setFormData] = useState({});
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
-  const signInUsingGoogle = () => {
-    return signInWithPopup(auth, googleProvider)
-      .then((response) => response.json())
+  const { email, password } = formData;
+
+  const signInUsingEmailPassword = () => {
+    createUserWithEmailAndPassword(auth, email, password)
       .then((data) => {
-        setError("");
         setUser(data);
+        console.log(data);
       })
       .catch((error) => {
         setError(error);
       });
+  };
+
+  const signInUsingGoogle = () => {
+    return signInWithPopup(auth, googleProvider);
   };
 
   const signInUsingGithub = () => {
@@ -46,15 +53,25 @@ const useFirebase = () => {
   };
 
   useEffect(() => {
-    const unSubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        setUser(user);
+    const unSubscribe = onAuthStateChanged(auth, (data) => {
+      if (data) {
+        setUser(data);
       }
     });
     return unSubscribe;
   }, []);
 
-  return { user, signInUsingGoogle, signInUsingGithub, logOut, error };
+  return {
+    user,
+    error,
+    setError,
+    setUser,
+    setFormData,
+    signInUsingEmailPassword,
+    signInUsingGoogle,
+    signInUsingGithub,
+    logOut,
+  };
 };
 
 export default useFirebase;
