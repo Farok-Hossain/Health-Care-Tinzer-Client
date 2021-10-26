@@ -9,21 +9,42 @@ const CommonForm = ({ signin }) => {
   const location = useLocation();
   const history = useHistory();
 
-  const { setUser, setError, signInUsingGoogle, signInUsingGithub } = useAuth();
-
-  const [userRegistration, setUserRegistration] = useState({
-    username: "",
-    email: "",
-    password: "",
-  });
-  const handleInput = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-
-    setUserRegistration({ ...userRegistration, [name]: value });
-  };
+  const {
+    error,
+    setUser,
+    setError,
+    handleInput,
+    signInUsingGoogle,
+    signInUsingGithub,
+    createUsingEmailPassword,
+    signInUsingEmailPassword,
+  } = useAuth();
 
   const redirect_uri = location.state?.from || "/home";
+
+  const handleSignInWithPassword = () => {
+    signInUsingEmailPassword()
+      .then((data) => {
+        setUser(data.user);
+        history.push(redirect_uri);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  };
+
+  const handleSigUpWithPassword = () => {
+    createUsingEmailPassword()
+      .then((data) => {
+        setUser(data.user);
+        history.push(redirect_uri);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  };
 
   const handleGoogleLogin = () => {
     signInUsingGoogle()
@@ -31,10 +52,10 @@ const CommonForm = ({ signin }) => {
         setError("");
         setUser(data.user);
         history.push(redirect_uri);
-        console.log(redirect_uri);
       })
       .catch((error) => {
         setError(error);
+        console.log(error);
       });
   };
 
@@ -86,17 +107,40 @@ const CommonForm = ({ signin }) => {
             </div>
           </Col>
           <Col lg="12">
+            <div className="forgot_password error_message">
+              <span>{error.message}</span>
+            </div>
+          </Col>
+          <Col lg="12">
             <div className="forgot_password">
               <Link to="/">Forgot Password</Link>
             </div>
           </Col>
-          <Col lg="12">
-            <div className="send_btn">
-              <button type="submit" className="default_btn">
-                Log In Now
-              </button>
-            </div>
-          </Col>
+          {signin ? (
+            <Col lg="12">
+              <div className="send_btn">
+                <button
+                  onClick={handleSignInWithPassword}
+                  type="submit"
+                  className="default_btn"
+                >
+                  Log In Now
+                </button>
+              </div>
+            </Col>
+          ) : (
+            <Col lg="12">
+              <div className="send_btn">
+                <button
+                  onClick={handleSigUpWithPassword}
+                  type="submit"
+                  className="default_btn"
+                >
+                  Sign Up Now
+                </button>
+              </div>
+            </Col>
+          )}
           <Col lg="12">
             <span className="signin_or">OR</span>
           </Col>

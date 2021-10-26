@@ -26,10 +26,10 @@
   font-weight: 700;
 }
 
-.contact_card span {
+.contact_card span,
+.contact_card p {
   margin-bottom: 0;
   color: #7b7c93;
-
 }
 
 .contact_card span a {

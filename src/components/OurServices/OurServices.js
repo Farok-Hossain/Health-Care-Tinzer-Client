@@ -3,6 +3,7 @@ import OurServicesData from "./OurServicesData";
 import "./OurServices.css";
 import { useHistory } from "react-router-dom";
 import CommonSectionHeader from "../CommonSectionHeader/CommonSectionHeader";
+import { Fade } from "react-reveal";
 
 const OurServices = ({ services }) => {
   const ourServiceData = OurServicesData();
@@ -26,22 +27,27 @@ const OurServices = ({ services }) => {
       <div className="service_img"></div>
       <div className="service_container">
         <Container>
-          <CommonSectionHeader style={style} data={data}></CommonSectionHeader>
-          <Row>
-            {ourServiceData.map((item, ind) => {
-              const { id, icon, name, desc } = item;
-              return (
-                <Col className="service_item" sm="12" md="6" lg="4" key={id}>
-                  <div className="service_card">
-                    <div className="service_icon">{icon}</div>
-                    <h2>{name}</h2>
-                    <p>{desc}</p>
-                    <span onClick={() => handleCardBtn(id)}>Read More +</span>
-                  </div>
-                </Col>
-              );
-            })}
-          </Row>
+          <Fade bottom distance="60px" duration={3000}>
+            <CommonSectionHeader
+              style={style}
+              data={data}
+            ></CommonSectionHeader>
+            <Row>
+              {ourServiceData.map((item, ind) => {
+                const { id, icon, name, desc } = item;
+                return (
+                  <Col className="service_item" sm="12" md="6" lg="4" key={id}>
+                    <div className="service_card">
+                      <div className="service_icon">{icon}</div>
+                      <h2>{name}</h2>
+                      <p>{desc}</p>
+                      <span onClick={() => handleCardBtn(id)}>Read More +</span>
+                    </div>
+                  </Col>
+                );
+              })}
+            </Row>
+          </Fade>
         </Container>
       </div>
     </>

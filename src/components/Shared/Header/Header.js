@@ -57,10 +57,11 @@ const Header = () => {
           <ul className={toggleNav ? "nav_menu" : "nav_menu active"}>
             <li className="nav_item">
               <NavLink
+                exact
                 onClick={handleToggleNav}
                 activeClassName="active_nav"
                 className="nav_link"
-                to="/home"
+                to="/"
               >
                 Home
               </NavLink>
@@ -99,6 +100,7 @@ const Header = () => {
               <li className="nav_item">
                 <NavLink
                   onClick={handleToggleNav}
+                  activeClassName="active_nav"
                   className="nav_link"
                   to="/sign-in"
                 >

@@ -5,7 +5,6 @@ import useAuth from "../../../hooks/useAuth";
 
 const TopHeader = () => {
   const { logOut, user } = useAuth();
-  console.log(user);
   return (
     <div className="top_banner">
       <Container className="d-flex justify-content-between">

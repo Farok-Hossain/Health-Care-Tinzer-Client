@@ -13,7 +13,7 @@ const SignIn = () => {
           //   flex="flex-row-reverse"
         ></CommonHeader>
       </div>
-      <CommonForm></CommonForm>
+      <CommonForm signin={true}></CommonForm>
     </>
   );
 };

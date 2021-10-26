@@ -1,147 +1,151 @@
 .form {
-    background: #ffffff;
-    -webkit-box-shadow: 0 2px 48px 0 rgb(0 0 0 / 8%);
-    box-shadow: 0 2px 48px 0 rgb(0 0 0 / 8%);
-    padding: 40px;
-    border-radius: 5px;
-    max-width: 600px;
-    margin: auto;
-    margin: 100px auto;
+  background: #ffffff;
+  -webkit-box-shadow: 0 2px 48px 0 rgb(0 0 0 / 8%);
+  box-shadow: 0 2px 48px 0 rgb(0 0 0 / 8%);
+  padding: 40px;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: auto;
+  margin: 100px auto;
 }
 
 .form_title {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .form_title>h3 {
-    font-size: 30px;
-    font-family: "Roboto",
-        sans-serif;
-    margin-bottom: 8px;
+  font-size: 30px;
+  font-family: "Roboto",
+    sans-serif;
+  margin-bottom: 8px;
 }
 
 .form_title>p {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .form_control {
-    display: block;
-    width: 100%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    background-clip: padding-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-    height: 50px;
-    border: 1px solid #eeeeee;
-    border-radius: 3px;
-    color: #0f123b;
-    padding-left: 20px;
-    background: transparent;
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-clip: padding-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  height: 50px;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  color: #0f123b;
+  padding-left: 20px;
+  background: transparent;
 }
 
 .form_control:focus {
-    outline-color: #207ef7;
+  outline-color: #207ef7;
 }
 
 .forgot_password {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .forgot_password>a {
-    color: #777777;
+  color: #777777;
 }
 
 .forgot_password>a:hover {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .default_btn {
-    border: none;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    overflow: hidden;
-    z-index: 1;
-    text-transform: capitalize;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    border-radius: 30px;
-    opacity: 1;
-    font-weight: 400;
-    font-size: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+  border: none;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+  z-index: 1;
+  text-transform: capitalize;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 30px;
+  opacity: 1;
+  font-weight: 400;
+  font-size: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .default_btn:hover {
-    background-color: #006af5;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
-        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  background-color: #006af5;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .send_btn {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .signin_or {
-    position: relative;
-    display: block;
-    text-align: center;
+  position: relative;
+  display: block;
+  text-align: center;
 }
 
 .signin_or::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 45%;
-    height: 2px;
-    background: #777777;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 45%;
+  height: 2px;
+  background: #777777;
 }
 
 .signin_or::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 45%;
-    height: 2px;
-    background: #777777;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 45%;
+  height: 2px;
+  background: #777777;
 }
 
 .sign_in_btn {
-    border: none;
-    width: 100%;
-    height: 45px;
-    margin: 12px 0;
-    border-radius: 5px;
-    background-color: #db3236;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
+  border: none;
+  width: 100%;
+  height: 45px;
+  margin: 12px 0;
+  border-radius: 5px;
+  background-color: #db3236;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .sign_in_btn:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .sign_in_btn.github {
-    background-color: #6cc644;
+  background-color: #6cc644;
 }
 
 .sign_in_btn>.fab {
-    margin-right: 10px;
-    font-size: 20px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.error_message {
+  color: #db3236 !important;
 }

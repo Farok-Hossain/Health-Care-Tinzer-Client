@@ -7,32 +7,51 @@ import {
   onAuthStateChanged,
   GithubAuthProvider,
   createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 
 const useFirebase = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [user, setUser] = useState({});
   const [error, setError] = useState({});
-  const [formData, setFormData] = useState({});
+
+  const [userRegistration, setUserRegistration] = useState({
+    username: "",
+    email: "",
+    password: "",
+  });
+  const handleInput = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setUserRegistration({ ...userRegistration, [name]: value });
+  };
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
-  const { email, password } = formData;
-
   const signInUsingEmailPassword = () => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((data) => {
-        setUser(data);
-        console.log(data);
-      })
-      .catch((error) => {
-        setError(error);
-      });
+    return signInWithEmailAndPassword(
+      auth,
+      userRegistration.email,
+      userRegistration.password
+    );
+  };
+
+  const createUsingEmailPassword = () => {
+    return createUserWithEmailAndPassword(
+      auth,
+      userRegistration.email,
+      userRegistration.password
+    );
   };
 
   const signInUsingGoogle = () => {
-    return signInWithPopup(auth, googleProvider);
+    setIsLoading(true);
+    return signInWithPopup(auth, googleProvider).finally(() =>
+      setIsLoading(false)
+    );
   };
 
   const signInUsingGithub = () => {
@@ -56,6 +75,9 @@ const useFirebase = () => {
     const unSubscribe = onAuthStateChanged(auth, (data) => {
       if (data) {
         setUser(data);
+        setIsLoading(false);
+      } else {
+        setIsLoading(false);
       }
     });
     return unSubscribe;
@@ -64,9 +86,11 @@ const useFirebase = () => {
   return {
     user,
     error,
+    isLoading,
     setError,
     setUser,
-    setFormData,
+    handleInput,
+    createUsingEmailPassword,
     signInUsingEmailPassword,
     signInUsingGoogle,
     signInUsingGithub,

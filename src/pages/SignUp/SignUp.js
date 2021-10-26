@@ -5,7 +5,13 @@ import img from "../../images/signup.svg";
 const SignUp = () => {
   return (
     <>
-      <CommonHeader header="Sing Up" img={img}></CommonHeader>
+      <div className="signin_container">
+        <CommonHeader
+          img={img}
+          header="Sign Up"
+          //   flex="flex-row-reverse"
+        ></CommonHeader>
+      </div>
       <CommonForm signin={false}></CommonForm>
     </>
   );

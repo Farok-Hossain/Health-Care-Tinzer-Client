@@ -7,7 +7,7 @@ const BannerCard = () => {
   return (
     <div className="banner_container">
       <Container>
-        <Fade bottom exit={false}>
+        <Fade distance="40px" duration={3000} bottom exit={false}>
           <Row>
             {BannerItem.map((item, ind) => {
               const { icon, header, desc } = item;
