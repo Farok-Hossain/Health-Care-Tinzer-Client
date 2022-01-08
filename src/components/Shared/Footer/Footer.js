@@ -17,8 +17,7 @@ const Footer = () => {
             <div className="single-footer-widget">
               <h3>Tinzer</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore aliqua.
+              Each template that you find here is innovative and unique in its way. That said, no matter which you choose.
               </p>
               <ul className="footer-social">
                 <li className="social_icon">

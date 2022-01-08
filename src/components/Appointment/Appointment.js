@@ -17,8 +17,7 @@ const Appointment = () => {
             <div className="appointment_context">
               <h5>Pick Your Package</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Each template that you find here is innovative and unique in its way. That said, no matter which you choose.
               </p>
             </div>
           </Col>
@@ -31,8 +30,7 @@ const Appointment = () => {
             <div className="appointment_context">
               <h5>Tinzer App Setup</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Each template that you find here is innovative and unique in its way. That said, no matter which you choose.
               </p>
             </div>
           </Col>
@@ -45,8 +43,7 @@ const Appointment = () => {
             <div className="appointment_context">
               <h5>Going Live</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Each template that you find here is innovative and unique in its way. That said, no matter which you choose.
               </p>
             </div>
           </Col>
@@ -59,8 +56,7 @@ const Appointment = () => {
             <div className="appointment_context">
               <h5>Pick Your Package</h5>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Each template that you find here is innovative and unique in its way. That said, no matter which you choose.
               </p>
             </div>
           </Col>

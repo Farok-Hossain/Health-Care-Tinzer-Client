@@ -17,7 +17,7 @@ const ContactCard = () => {
                 <a href="mailto:admin@tinzer.com">admin@tinzer.com</a>
               </span>
               <span>
-                <a href="mailto:admin@tinzer.com">info@tinzer.com</a>
+                <a href="mailto:admin@tinzer.com">info@tenzer.com</a>
               </span>
             </div>
           </Col>

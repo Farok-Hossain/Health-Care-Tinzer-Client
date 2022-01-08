@@ -8,7 +8,7 @@ const Solutions = () => {
       <Common data={SolutionsData}>
         <ul className="solutions_features">
           <li>
-            <span>Tinger eConsult Program</span>
+            <span>Tinzer eConsult Program</span>
           </li>
           <li>
             <span>Provide More Potential Video</span>

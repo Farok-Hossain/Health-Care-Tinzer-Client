@@ -6,17 +6,17 @@ const BannerData = [
   {
     icon: reduceHealth,
     header: "Reduce Helth Care Cost",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+    desc: "Each template that you find here is innovative and unique in its way. That said, no matter which you choose.",
   },
   {
     icon: textNote,
     header: "Reduce Pressure On Medical Staff",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+    desc: "Each template that you find here is innovative and unique in its way. That said, no matter which you choose.",
   },
   {
     icon: hospital,
     header: "Continuum Of Care",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
+    desc: "Each template that you find here is innovative and unique in its way. That said, no matter which you choose.",
   },
 ];
 
