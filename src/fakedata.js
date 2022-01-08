@@ -6,6 +6,7 @@
       "Surgery, radiation, chemotherapy and hormone therapy can all be used to relieve symptoms. Other medications may relieve symptoms such as pain and shortness of breath. Palliative treatment can be used at the same time as other treatments intended to cure your cancer",
     img: "https://i.ibb.co/RS2vTRq/Capture.jpg",
   },
+  
   {
     id: 2,
     treatment: "DENTAL SURGERY",
